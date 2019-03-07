@@ -36,16 +36,21 @@ class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
     // this.element;
+    this.element = element;
   }
 
   select() {
     // Select all ".tabs-item" elements from the DOM
     // const items;
+    const linksTwo = document.querySelectorAll('.tab-item');
+    linksTwo.forEach(element => {
+      element.classList.remove('tabs-items-selected');
+    });
 
     // Remove the class "tabs-item-selected" from each element
     
     // Add a class named "tabs-item-selected" to this element
-    //this.element;
+    this.element.classList.add("tabs-items-selected");
   }
 }
 
@@ -59,4 +64,4 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll();
+links = document.querySelectorAll('.tabs-link');
